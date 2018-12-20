@@ -1,0 +1,10 @@
+version: '3'
+services:
+  openvpn:
+    build: .
+    ports:
+     - "1194:1194/udp"
+    volumes:
+     - ./openvpn:/etc/openvpn
+    privileged:
+      "true"
